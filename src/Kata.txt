@@ -1,48 +1,80 @@
-lagu
-song
-ragam suara yang berirama (dalam bercakap, bernyanyi, membaca, dan sebagainya)
-variety of rhythmic sounds (in speaking, singing, reading, etc.)
-nyaring
-loud
-keras, tinggi, dan terang (tentang suara dan bunyi); lantang
-loud, high, and bright (about sounds and); out loud
-pedih
-painful
-berasa sakit, seperti luka dicuci dengan sublimat
-it hurts, like a wound washed with sublimate
-yakin
-certain
-percaya (tahu, mengerti) sungguh-sungguh; (merasa) pasti (tentu, tidak salah lagi)
-believe (know, understand) truly; (feel) certain (certain, unmistakable)
-neraca
-balance sheet
-alat untuk mengukur berat (terutama yang berukuran kecil), biasanya berupa batang lurus dengan dua mangkuk yang digantungkan pada kedua ujungnya untuk tempat anak timbangan dan benda yang ditimbang, seperti alat yang dipakai untuk menimbang emas
-a tool for measuring weight (especially small ones), usually in the form of a straight rod with two bowls hanging from both ends for holding weights and the object being weighed, such as a tool used to weigh gold
-akibat
-consequence
-sesuatu yang merupakan akhir atau hasil suatu peristiwa (pembuatan, keputusan); persyaratan atau keadaan yang mendahuluinya
-something that is the end or result of an event (making, decision); requirements or circumstances that precede it
-terbang
-fly
-bergerak atau melayang di udara dengan tenaga sayap (tentang burung dan sebagainya) atau dengan tenaga mesin (tentang pesawat terbang dan sebagainya)
-moving or floating in the air with wing power (about birds and so on) or with engine power (about airplanes and so on)
-gitar
-guitar
-alat musik dengan bahan dari kayu seperti biola, berleher panjang, berdawai enam atau lebih, dimainkan dengan memetik dawai itu dengan jari
-a musical instrument made of wood such as a violin, with a long neck, with six or more strings, played by plucking the strings with the fingers
-rakun
-raccoon
-mamalia omnivor berambut cokelat keabu-abuan, dapat berdiri menggunakan kedua kaki belakangnya, berekor tebal dan bergaris hitam, umumnya berukuran kecil hingga sedang (1 kg hingga lebih dari 20 kg), banyak dijumpai di benua Amerika
-omnivorous mammal with grayish brown hair, can stand using its two hind legs, thick tail and black stripes, generally small to medium sized (1 kg to more than 20 kg), often found in the Americas
-rusa
-deer
-mamalia berkuku genap yang termasuk dalam kelompok ruminansia, bertanduk panjang dan bercabang-cabang, rambutnya berwarna cokelat tua dan bergaris-garis atau berbintik-bintik putih
-an even-toed mammal belonging to the ruminant group, with long, branched horns, dark brown hair and striped or white spots
-mobil
-car
-Mobil adalah kendaraan yang menggunakan bahan bakar untuk menghidupkan mesinnya. Mobil kependekan dari otomobil yang berasal dari Bahasa Yunani 'autos' (sendiri) dan Latin 'movére' (bergerak).
-A car is a vehicle that uses fuel to start its engine. Mobil is short for automobile which comes from the Greek 'autos' (self) and Latin 'movére' (to move).
+bendera
+flag
+Kain berwarna dengan simbol atau motif yang mewakili suatu negara atau kelompok.
+Colored cloth with symbols or patterns representing a country or group.
 biru
 blue
 Biru merupakan salah satu dari tiga warna primer additif selain merah dan hijau. Biru juga adalah jenis warna antara sian dan nila. Biru adalah sebuah warna.
 Blue is one of the three additive primary colors besides red and green. Blue is also a color between cyan and indigo. Blue is a color.
+bulan
+moon
+Satelit alami Bumi yang mengorbit di sekitar planet.
+Earth's natural satellite orbiting the planet.
+gitar
+guitar
+alat musik dengan bahan dari kayu seperti biola, berleher panjang, berdawai enam atau lebih, dimainkan dengan memetik dawai itu dengan jari.
+a musical instrument made of wood such as a violin, with a long neck, with six or more strings, played by plucking the strings with the fingers.
+gunung
+mountain
+Bukit tinggi yang mencapai ketinggian tertentu.
+High hill reaching a certain elevation.
+jam
+clock
+Alat untuk mengukur waktu, biasanya dengan jarum atau angka.
+A device for measuring time, usually with hands or numbers.
+kamera
+camera
+Alat untuk merekam gambar atau video.
+A device for capturing images or video.
+kipas
+fan
+Alat untuk menghasilkan angin dan menyegarkan udara.
+Device to generate wind and freshen the air.
+kucing
+cat
+Hewan berkaki empat, berbulu, biasanya sebagai hewan peliharaan.
+A four-legged, furry animal, usually kept as a pet.
+lagu
+song
+ragam suara yang berirama (dalam bercakap, bernyanyi, membaca, dan sebagainya).
+variety of rhythmic sounds (in speaking, singing, reading, etc.).
+laptop 
+laptop
+Komputer portabel yang dapat digunakan di pangkuan.
+Portable computer for use on the lap.
+layar
+screen
+Permukaan yang menampilkan gambar atau informasi.
+Surface displaying images or information.
+mata
+eye
+Organ sensorik untuk melihat.
+Sensory organ for seeing.
+matahari
+sun
+Bintang di pusat tata surya yang memberikan cahaya dan panas.
+The star at the center of the solar system that provides light and heat.
+mobil
+car
+Mobil adalah kendaraan yang menggunakan bahan bakar untuk menghidupkan mesinnya. Mobil kependekan dari otomobil yang berasal dari Bahasa Yunani 'autos' (sendiri) dan Latin 'movére' (bergerak).
+A car is a vehicle that uses fuel to start its engine. Mobil is short for automobile which comes from the Greek 'autos' (self) and Latin 'movére' (to move).
+musik
+music
+Seni bunyi yang disusun sedemikian rupa melalui nada, ritme, dan harmoni yang dapat memberikan pengaruh perasaan atau pikiran.
+The art of sound organized in a structured way through tones, rhythm, and harmony that can influence emotions or thoughts.
+pohon
+tree
+Tanaman berkayu dengan cabang dan daun, tumbuh di tanah.
+A woody plant with branches and leaves, growing in the ground.
+rakun
+raccoon
+mamalia omnivor berambut cokelat keabu-abuan, dapat berdiri menggunakan kedua kaki belakangnya, berekor tebal dan bergaris hitam, umumnya berukuran kecil hingga sedang (1 kg hingga lebih dari 20 kg), banyak dijumpai di benua Amerika.
+omnivorous mammal with grayish brown hair, can stand using its two hind legs, thick tail and black stripes, generally small to medium sized (1 kg to more than 20 kg), often found in the Americas.
+rusa
+deer
+mamalia berkuku genap yang termasuk dalam kelompok ruminansia, bertanduk panjang dan bercabang-cabang, rambutnya berwarna cokelat tua dan bergaris-garis atau berbintik-bintik putih.
+an even-toed mammal belonging to the ruminant group, with long, branched horns, dark brown hair and striped or white spots.
+roti
+bread
+Makanan yang dibuat dari tepung terigu dan air, biasanya dipanggang.
+Food made from flour and water, usually baked.

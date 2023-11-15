@@ -73,7 +73,16 @@ public class Node {
         return description;
     }
 
-    // public String getGimmick(){
-    // if()
-    // }
+    public String getGimmick() {
+        if (key.compareTo("gunung") == 0 || key.compareTo("mountain") == 0) {
+            return "gambar";
+        }
+        if (key.compareTo("musik") == 0 || key.compareTo("music") == 0) {
+            return "musik";
+        }
+        if (key.compareTo("biru") == 0 || key.compareTo("blue") == 0) {
+            return "color";
+        }
+        return "none";
+    }
 }

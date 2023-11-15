@@ -3,19 +3,24 @@ package Controller;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
-import javafx.animation.RotateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
+import javafx.scene.media.AudioClip;
 
 public class UncoverController implements Initializable {
+
+    @FXML
+    private ImageView imgDeskripsi;
+
+    @FXML
+    private ImageView imgDescription;
 
     @FXML
     private TextArea ta_description;
@@ -32,18 +37,28 @@ public class UncoverController implements Initializable {
     @FXML
     private TextField tf_word;
 
+    @FXML
+    private Button btn_Play;
+
+    private AudioClip audioClip;
+
     private boolean gimmick = false;
     RBT IETree = new RBT();
     RBT EITree = new RBT();
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-        // imgGim1.setVisible(false);
-        // imgGim2.setVisible(false);
-        // lblClock.setVisible(false);
-        // initClock();
+        imgDeskripsi.setVisible(false);
+        imgDescription.setVisible(false);
 
-        String[] stringArray = new String[48];
+        URL resourceURL = getClass().getResource("src/Musik.mp3");
+        if (resourceURL != null) {
+            audioClip = new AudioClip(resourceURL.toString());
+        } else {
+            System.err.println("Resource not found");
+        }
+
+        String[] stringArray = new String[80];
 
         try {
             String filename = "Kata.txt";
@@ -77,6 +92,22 @@ public class UncoverController implements Initializable {
                 EITree.add(stringArray[i + 1], stringArray[i], stringArray[i + 2], stringArray[i + 3]);
             }
         }
+        ta_deskripsi.setWrapText(true);
+        ta_description.setWrapText(true);
+        ta_deskripsi.setStyle("-fx-text-alignment: justify;");
+        ta_description.setStyle("-fx-text-alignment: justify;");
+    }
+
+    @FXML
+    void btn_Play(ActionEvent event) {
+        if (audioClip != null) {
+            audioClip.stop();
+            audioClip.play();
+            // audioClip.setVolume(1);
+
+        } else {
+            System.err.println("AudioClip is not initialized");
+        }
     }
 
     void IDEN(String key) {
@@ -85,6 +116,10 @@ public class UncoverController implements Initializable {
             tf_word.setText(IETree.getValue(key));
             ta_deskripsi.setText(IETree.getDeskripsi(tf_input.getText()));
             ta_description.setText(EITree.getDescription(IETree.getValue(tf_input.getText())));
+            ta_deskripsi.setWrapText(true);
+            ta_description.setWrapText(true);
+            ta_deskripsi.setStyle("-fx-text-alignment: justify;");
+            ta_description.setStyle("-fx-text-alignment: justify;");
         } else {
             tf_kata.setText("tidak ditemukan");
             tf_word.setText("not found");
@@ -99,6 +134,10 @@ public class UncoverController implements Initializable {
             tf_word.setText(tf_input.getText());
             ta_deskripsi.setText(IETree.getDeskripsi(EITree.getValue(tf_input.getText())));
             ta_description.setText(EITree.getDescription(tf_input.getText()));
+            ta_deskripsi.setWrapText(true);
+            ta_description.setWrapText(true);
+            ta_deskripsi.setStyle("-fx-text-alignment: justify;");
+            ta_description.setStyle("-fx-text-alignment: justify;");
         } else {
             tf_kata.setText("tidak ditemukan");
             tf_word.setText("not found");
@@ -107,31 +146,29 @@ public class UncoverController implements Initializable {
         }
     }
 
-    // public String Gimmick() {
-    // String gimmick = "";
-    // if (IETree.search(tf_input.getText()) == true) {
-    // Node node = IETree.isExist(IETree.getRoot(), tf_input.getText());
-    // gimmick = node.getGimmick();
-    // return gimmick;
-    // } else if (EITree.search(tf_input.getText()) == true) {
-    // Node node = EITree.isExist(EITree.getRoot(), tf_input.getText());
-    // gimmick = node.getGimmick();
-    // return gimmick;
-    // }
-    // return gimmick;
-    // }
+    public String Gimmick() {
+        String gimmick = "";
+        if (IETree.search(tf_input.getText()) == true) {
+            Node node = IETree.isExist(IETree.getRoot(), tf_input.getText());
+            gimmick = node.getGimmick();
+            return gimmick;
+        } else if (EITree.search(tf_input.getText()) == true) {
+            Node node = EITree.isExist(EITree.getRoot(), tf_input.getText());
+            gimmick = node.getGimmick();
+            return gimmick;
+        }
+        return gimmick;
+    }
 
     @FXML
     void btn_Search(ActionEvent event) {
         IETree.inorderTraversal(IETree.getRoot());
 
         if (gimmick == true) {
-            // lblDesc.setVisible(true);
-            // tfDesc.setVisible(true);
-            // tfDeskripsi.setVisible(true);
-            // lblClock.setVisible(false);
-            // imgGim1.setVisible(false);
-            // imgGim2.setVisible(false);
+            ta_description.setVisible(true);
+            ta_description.setVisible(true);
+            imgDeskripsi.setVisible(false);
+            imgDescription.setVisible(false);
 
             gimmick = false;
         }
@@ -142,43 +179,27 @@ public class UncoverController implements Initializable {
             } else if (EITree.search(tf_input.getText())) {
                 ENID(tf_input.getText());
             } else {
-                System.out.println();
+                tf_kata.setText("tidak ditemukan");
+                tf_word.setText("not found");
+                ta_deskripsi.setText(null);
+                ta_description.setText(null);
             }
         }
 
-        // if (Gimmick() != "") {
-        // if (Gimmick().compareTo("clock") == 0) {
-        // // date Succeed
-        // lblClock.setVisible(true);
-        // gimmick = true;
-        // } else if (Gimmick().compareTo("erase") == 0) {
-        // // hapus Succeed
-        // lblDesc.setVisible(false);
-        // tfDesc.setVisible(false);
-        // tfDeskripsi.setVisible(false);
-        // gimmick = true;
-        // } else if (Gimmick().compareTo("popup") == 0) {
-        // // foto Succeed
-        // lblDesc.setVisible(false);
-        // tfDesc.setVisible(false);
-        // tfDeskripsi.setVisible(false);
-        // imgGim1.setVisible(true);
-        // imgGim2.setVisible(true);
-        // gimmick = true;
-        // } else if (Gimmick().compareTo("link") == 0) {
-        // // map Succeed
-        // gimmick = true;
-        // try {
-        // Runtime.getRuntime().exec(new String[] { "cmd", "/c", "start chrome
-        // https://maps.app.goo.gl/pAq67vZxGAdrWQfZA" });
-        // } catch (IOException e) {
-        // e.printStackTrace();
-        // }
-        // } else if (Gimmick().compareTo("spinning") == 0) {
-        // RotateTransition rotate = new RotateTransition(Duration.seconds(1), vBox);
-        // rotate.setByAngle(360);
-        // rotate.play();
-        // }
-        // }
+        if (Gimmick() != "") {
+            if (Gimmick().compareTo("gambar") == 0) {
+                ta_description.setVisible(true);
+                ta_deskripsi.setVisible(true);
+                imgDeskripsi.setVisible(true);
+                imgDescription.setVisible(true);
+                gimmick = true;
+            }
+            if (Gimmick().equals("musik")) {
+                ta_description.setVisible(true);
+                ta_deskripsi.setVisible(true);
+                btn_Play.setVisible(true);
+                gimmick = true;
+            }
+        }
     }
 }
