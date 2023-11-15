@@ -78,10 +78,16 @@ public class Node {
             return "gambar";
         }
         if (key.compareTo("musik") == 0 || key.compareTo("music") == 0) {
-            return "musik";
+            return "play";
+        }
+        if (key.compareTo("mobil") == 0 || key.compareTo("car") == 0) {
+            return "kendaraan";
         }
         if (key.compareTo("biru") == 0 || key.compareTo("blue") == 0) {
             return "color";
+        }
+        if (key.compareTo("peta") == 0 || key.compareTo("maps") == 0) {
+            return "link";
         }
         return "none";
     }

@@ -3,6 +3,7 @@ package Controller;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -17,10 +18,13 @@ import javafx.scene.media.AudioClip;
 public class UncoverController implements Initializable {
 
     @FXML
+    private ImageView imgDescription;
+
+    @FXML
     private ImageView imgDeskripsi;
 
     @FXML
-    private ImageView imgDescription;
+    private ImageView imgMobil;
 
     @FXML
     private TextArea ta_description;
@@ -40,6 +44,9 @@ public class UncoverController implements Initializable {
     @FXML
     private Button btn_Play;
 
+    @FXML
+    private Button btn_Search;
+
     private AudioClip audioClip;
 
     private boolean gimmick = false;
@@ -50,6 +57,7 @@ public class UncoverController implements Initializable {
     public void initialize(URL arg0, ResourceBundle arg1) {
         imgDeskripsi.setVisible(false);
         imgDescription.setVisible(false);
+        imgMobil.setVisible(false);
 
         URL resourceURL = getClass().getResource("src/Musik.mp3");
         if (resourceURL != null) {
@@ -58,7 +66,7 @@ public class UncoverController implements Initializable {
             System.err.println("Resource not found");
         }
 
-        String[] stringArray = new String[80];
+        String[] stringArray = new String[84];
 
         try {
             String filename = "Kata.txt";
@@ -100,13 +108,16 @@ public class UncoverController implements Initializable {
 
     @FXML
     void btn_Play(ActionEvent event) {
-        if (audioClip != null) {
-            audioClip.stop();
-            audioClip.play();
-            // audioClip.setVolume(1);
-
-        } else {
-            System.err.println("AudioClip is not initialized");
+        try {
+            if (audioClip != null) {
+                audioClip.stop();
+                audioClip.play();
+                System.out.println("Music played successfully!");
+            } else {
+                System.err.println("AudioClip is not initialized");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -169,6 +180,7 @@ public class UncoverController implements Initializable {
             ta_description.setVisible(true);
             imgDeskripsi.setVisible(false);
             imgDescription.setVisible(false);
+            imgMobil.setVisible(false);
 
             gimmick = false;
         }
@@ -193,12 +205,30 @@ public class UncoverController implements Initializable {
                 imgDeskripsi.setVisible(true);
                 imgDescription.setVisible(true);
                 gimmick = true;
-            }
-            if (Gimmick().equals("musik")) {
+            } else if (Gimmick().compareTo("kendaraan") == 0) {
+                ta_description.setVisible(true);
+                ta_deskripsi.setVisible(true);
+                imgMobil.setVisible(true);
+                gimmick = true;
+            } else if (Gimmick().equals("play")) {
                 ta_description.setVisible(true);
                 ta_deskripsi.setVisible(true);
                 btn_Play.setVisible(true);
                 gimmick = true;
+                // Automatically play the music
+                btn_Play(event);
+            } else if (Gimmick().equals("color")) {
+                ta_deskripsi.setStyle("-fx-text-fill: blue;");
+                ta_description.setStyle("-fx-text-fill: blue;");
+            } else if (Gimmick().compareTo("link") == 0) {
+                // map Succeed
+                gimmick = true;
+                try {
+                    Runtime.getRuntime().exec(
+                            new String[] { "cmd", "/c", "start chrome https://maps.app.goo.gl/S4WL5pS7QaR369fu9" });
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }

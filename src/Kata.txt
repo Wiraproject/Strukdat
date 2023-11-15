@@ -62,6 +62,10 @@ musik
 music
 Seni bunyi yang disusun sedemikian rupa melalui nada, ritme, dan harmoni yang dapat memberikan pengaruh perasaan atau pikiran.
 The art of sound organized in a structured way through tones, rhythm, and harmony that can influence emotions or thoughts.
+peta
+maps
+Peta adalah gambaran permukaan bumi yang ditampilkan pada suatu bidang datar dengan skala tertentu.
+A map is an image of the earth's surface displayed on a flat plane at a certain scale.
 pohon
 tree
 Tanaman berkayu dengan cabang dan daun, tumbuh di tanah.
